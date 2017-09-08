@@ -1,28 +1,29 @@
 # Docker image for CSSLint checker
 
-[CSSLint](https://www.npmjs.com/package/csslint) CSSLint is a tool to help point out problems with your CSS code  
+[CSSLint](https://www.npmjs.com/package/csslint) CSSLint is a tool to help point out problems with your CSS code
 
 ## Supported tags and respective `Dockerfile` links
 
 - [`latest` (*Dockerfile*)](https://github.com/eea/eea.docker.csslint/blob/master/Dockerfile)
-- [`0.10.0` (*Dockerfile*)](https://github.com/eea/eea.docker.csslint/blob/0.10.0/Dockerfile)
+- [`1.0.5` (*Dockerfile*)](https://github.com/eea/eea.docker.csslint/blob/1.0.5/Dockerfile)
 
 ## Usage
 
-```console
-$ docker run -it --rm -v /path/to/javascript/code:/code eeacms/csslint
-```
+    $ docker run --rm -v /path/to/javascript/code:/code eeacms/csslint
+
+or
+
+    $ docker run --rm eeacms/csslint https://github.com/eea/eea.similarity.git
 
 ## Advanced usage
 
 Change output format to be used with Jenkins:
 
-```console
-$ docker run -it --rm -v /path/to/javascript/code:/code eeacms/csslint --format=lint-xml /code
-```
+
+    $ docker run --rm -e PARAMS="--format=lint-xml" eeacms/csslint https://github.com/eea/eea.similarity.git
+
 
 See `--help` for more options:
 
-```console
-$ docker run --rm eeacms/csslint --help
-```
+
+    $ docker run --rm -e PARAMS="--help" eeacms/csslint
