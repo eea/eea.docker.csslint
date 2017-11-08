@@ -5,7 +5,7 @@
 ## Supported tags and respective `Dockerfile` links
 
 - [`latest` (*Dockerfile*)](https://github.com/eea/eea.docker.csslint/blob/master/Dockerfile)
-- [`1.0.6` (*Dockerfile*)](https://github.com/eea/eea.docker.csslint/blob/1.0.6/Dockerfile)
+- [`1.0.5.1` (*Dockerfile*)](https://github.com/eea/eea.docker.csslint/blob/1.0.5.1/Dockerfile)
 - [`1.0.5` (*Dockerfile*)](https://github.com/eea/eea.docker.csslint/blob/1.0.5/Dockerfile)
 
 ## Usage
