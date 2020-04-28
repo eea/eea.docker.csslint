@@ -1,9 +1,9 @@
-FROM alpine:3.3
+FROM alpine:3
 MAINTAINER "EEA: IDM2 A-Team" <eea-edw-a-team-alerts@googlegroups.com>
 
 ENV CSSLINT_VERSION=1.0.5
 
-RUN apk add --no-cache --virtual .run-deps nodejs git \
+RUN apk add --no-cache --virtual .run-deps nodejs git npm \
  && npm install -g csslint@$CSSLINT_VERSION \
  && mkdir -p /code
 
