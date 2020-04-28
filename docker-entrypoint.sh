@@ -35,7 +35,11 @@ if [ ! -z "$GIT_SRC" ]; then
 fi
 
 if [ "$CMD" = "csslint" ]; then
-  csslint $PARAMS /code
+    if [ $(find /code -name *.css | wc -l) -gt 0 ]; then 
+        csslint $PARAMS /code
+    else
+        echo "No css files found"
+    fi
 else
   exec "$@"
 fi
